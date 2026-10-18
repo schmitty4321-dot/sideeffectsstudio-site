@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rare Side Effects Studio</title>
+<meta name="description" content="Rare Side Effects Studio makes small, loud, free brainrot games: Tap Tap Sahur and Brainrot Gem Quest. No real money, ever.">
+<meta property="og:title" content="Rare Side Effects Studio">
+<meta property="og:description" content="Prescribing brainrot. Free games from a doctor turned game dev: Tap Tap Sahur and Brainrot Gem Quest.">
+<meta property="og:image" content="https://sideeffectsstudio.buzz/img/og.jpg">
+<meta property="og:url" content="https://sideeffectsstudio.buzz/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#160b30">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<style>
+@font-face { font-family: 'Fredoka'; src: url('fonts/fredoka-600-latin.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+:root {
+  --bg: #160b30; --bg2: #21103f; --card: #2a1650; --line: #ffffff1a;
+  --ink: #fff7ea; --muted: #cbbbe6;
+  --pill: #ff3b5c; --cream: #fff1d6; --mint: #35e3a4; --gold: #ffd54a; --sky: #6fc3ff;
+  --display: 'Lilita One', 'Trebuchet MS', system-ui, sans-serif;
+  --body: 'Fredoka', 'Trebuchet MS', system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 600 17px/1.55 var(--body); overflow-x: hidden; }
+img, video { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+.wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+.display { font-family: var(--display); font-weight: 400; letter-spacing: .5px; line-height: 1.02; }
+
+/* ---------- nav ---------- */
+body > nav { position: sticky; top: 0; z-index: 20; background: #160b30e6; backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+body > nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-size: 20px; white-space: nowrap; }
+.brand svg { width: 38px; height: 38px; flex: none; }
+.brand small { display: block; font: 600 11px/1 var(--body); color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+.navlinks { display: flex; gap: 22px; }
+.navlinks a { text-decoration: none; color: var(--muted); font-size: 15px; }
+.navlinks a:hover { color: var(--ink); }
+@media (max-width: 640px) { .navlinks { display: none; } }
+
+/* ---------- buttons ---------- */
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 999px; text-decoration: none; font: 400 20px/1 var(--display); letter-spacing: .5px; transition: transform .15s ease, box-shadow .15s ease; border: 0; cursor: pointer; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.btn-pill { background: var(--pill); color: #fff; box-shadow: 0 6px 0 #a3182f, 0 14px 30px #ff3b5c55; }
+.btn-mint { background: var(--mint); color: #08321f; box-shadow: 0 6px 0 #17946a, 0 14px 30px #35e3a440; }
+.btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px #ffffff40; }
+.btn-ghost:hover { box-shadow: inset 0 0 0 2px #ffffffa0; }
+
+/* ---------- hero ---------- */
+.hero { position: relative; padding: 72px 0 96px; overflow: hidden; background:
+  radial-gradient(60% 60% at 80% 20%, #ff3b5c2e, transparent 70%),
+  radial-gradient(50% 60% at 10% 90%, #35e3a422, transparent 70%); }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; position: relative; gap: 40px; align-items: center; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: #ffffff12; color: var(--gold); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
+.hero h1 { font-size: clamp(48px, 8vw, 92px); margin: 18px 0 14px; }
+.hero h1 .rx { color: var(--pill); }
+.hero p.lead { font-size: clamp(18px, 2.2vw, 22px); color: var(--muted); max-width: 30em; margin: 0 0 28px; }
+.ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-art { position: relative; height: 460px; }
+.hero-art .card { position: absolute; width: 230px; border-radius: 26px; overflow: hidden; box-shadow: 0 30px 60px #0008; border: 4px solid #ffffff22; }
+.hero-art .c1 { left: 13%; top: 30px; transform: rotate(-8deg); }
+.hero-art .c2 { right: 2%; top: 0; transform: rotate(7deg); }
+.hero-art .floating-pill { position: absolute; width: 74px; height: 74px; filter: drop-shadow(0 10px 18px #0007); animation: bob 5s ease-in-out infinite; }
+.hero-art .p1 { left: 44%; top: 330px; animation-delay: -1s; }
+.hero-art .p2 { left: -2%; top: -10px; width: 52px; height: 52px; animation-delay: -2.5s; }
+@keyframes bob { 0%, 100% { translate: 0 0; rotate: -12deg; } 50% { translate: 0 -16px; rotate: 10deg; } }
+@media (max-width: 860px) {
+  .hero { padding: 40px 0 64px; }
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero-art { height: 340px; }
+  .hero-art .card { width: 170px; }
+  .hero-art .c1 { left: 6%; } .hero-art .c2 { right: 6%; }
+  .hero-art .p1 { top: 250px; }
+}
+
+/* ---------- section heads ---------- */
+section { padding: 88px 0; }
+.kicker { color: var(--mint); letter-spacing: 3px; text-transform: uppercase; font-size: 13px; }
+h2 { font-size: clamp(38px, 5.5vw, 60px); margin: 8px 0 14px; }
+.sub { color: var(--muted); max-width: 36em; margin: 0; }
+
+/* ---------- games ---------- */
+#games { background: linear-gradient(#160b30, #1c0d3a); }
+.game { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 64px; padding: 36px; border-radius: 32px; background: var(--card); border: 1px solid var(--line); position: relative; overflow: hidden; }
+.game::before { content: ''; position: absolute; inset: 0; background: radial-gradient(70% 80% at 0% 0%, var(--glow), transparent 60%); pointer-events: none; }
+.game.tts { --glow: #ffb02e2b; --accent: var(--gold); }
+.game.gq { --glow: #8f5cff33; --accent: #c39bff; }
+.game.flip .media { order: 2; }
+.game .info { position: relative; }
+.game .logo-row { display: flex; align-items: center; gap: 14px; }
+.game .logo-row img { width: 68px; height: 68px; border-radius: 18px; box-shadow: 0 6px 18px #0006; }
+.game h3 { font-size: clamp(34px, 4.5vw, 48px); margin: 0; }
+.status { display: inline-block; margin-top: 4px; padding: 3px 12px; border-radius: 999px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+.status.live { background: #35e3a42a; color: var(--mint); }
+.status.soon { background: #ffd54a24; color: var(--gold); }
+.game .tag { font-size: 21px; color: var(--accent); margin: 18px 0 10px; }
+.game ul { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 10px; }
+.game li { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); }
+.game li::before { content: ''; flex: none; width: 22px; height: 11px; margin-top: 8px; border-radius: 999px; background: linear-gradient(90deg, var(--pill) 50%, var(--cream) 50%); transform: rotate(-30deg); }
+.game li b { color: var(--ink); font-weight: 600; }
+.media { position: relative; display: flex; justify-content: center; gap: 18px; }
+.phone { position: relative; width: 250px; aspect-ratio: 9 / 16; border-radius: 34px; padding: 9px; background: #0b0618; box-shadow: 0 30px 60px #000a, inset 0 0 0 2px #ffffff22; flex: none; }
+.phone video, .phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 26px; background: #000; }
+.phone.small { width: 150px; margin-top: 70px; transform: rotate(4deg); border-radius: 24px; padding: 6px; }
+.phone.small img { border-radius: 19px; }
+.game.flip .phone.small { transform: rotate(-4deg); }
+@media (max-width: 860px) {
+  .game { grid-template-columns: 1fr; gap: 28px; padding: 24px 20px 28px; }
+  .game.flip .media { order: 0; }
+  .phone { width: 200px; }
+  .phone.small { width: 110px; margin-top: 54px; }
+}
+
+/* ---------- screenshots strip ---------- */
+.strip { display: flex; gap: 16px; overflow-x: auto; padding: 8px 4px 22px; margin-top: 36px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.strip figure { margin: 0; flex: none; width: 190px; scroll-snap-align: start; }
+.strip img { border-radius: 20px; border: 3px solid #ffffff1c; aspect-ratio: 9 / 16; object-fit: cover; width: 100%; }
+.strip figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; text-align: center; }
+
+/* ---------- side effects label ---------- */
+#side-effects .label { margin-top: 36px; background: var(--cream); color: #2b1838; border-radius: 26px; padding: 34px clamp(20px, 4vw, 44px); display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; box-shadow: 0 24px 50px #0007; transform: rotate(-.6deg); }
+.label .rx-big { font: 400 110px/0.8 var(--display); color: var(--pill); }
+.label h3 { font: 400 30px/1.1 var(--display); margin: 0 0 14px; }
+.label ul { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 34px; }
+.label li { padding: 6px 0; border-bottom: 1px dashed #2b183833; break-inside: avoid; }
+.label .fine { margin: 16px 0 0; font-size: 13px; color: #6a5577; }
+@media (max-width: 720px) { #side-effects .label { grid-template-columns: 1fr; gap: 10px; transform: none; } .label ul { columns: 1; } .label .rx-big { font-size: 80px; } }
+
+/* ---------- doctor ---------- */
+#doctor .wrap { display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; }
+.badge { width: 170px; height: 170px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 30% 30%, #3b2370, #1d0f3c); border: 3px solid #ffffff22; box-shadow: 0 20px 40px #0007; }
+.badge svg { width: 104px; height: 104px; }
+.promise { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.promise span { padding: 8px 14px; border-radius: 999px; background: #ffffff10; font-size: 15px; }
+@media (max-width: 720px) { #doctor .wrap { grid-template-columns: 1fr; } .badge { width: 130px; height: 130px; } }
+
+/* ---------- follow ---------- */
+#follow { text-align: center; background: radial-gradient(60% 80% at 50% 100%, #ff3b5c22, transparent 70%); }
+#follow .sub { margin-inline: auto; }
+.socials { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.socials svg { width: 22px; height: 22px; fill: currentColor; }
+
+footer { border-top: 1px solid var(--line); padding: 32px 0 44px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+footer .legal { display: flex; flex-wrap: wrap; gap: 18px; }
+footer a { color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-art .floating-pill { animation: none; }
+  .btn { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- the studio mark: a capsule whose cream half is a game controller -->
+    <symbol id="mark" viewBox="0 0 120 120">
+      <g transform="rotate(-35 60 60)">
+        <rect x="14" y="38" width="92" height="44" rx="22" fill="#fff1d6"/>
+        <path d="M36 38h24v44H36a22 22 0 0 1 0-44z" fill="#ff3b5c"/>
+        <rect x="24" y="44" width="30" height="7" rx="3.5" fill="#fff" opacity=".35"/>
+        <rect x="14" y="38" width="92" height="44" rx="22" fill="none" stroke="#2b1838" stroke-width="5"/>
+        <line x1="60" y1="38" x2="60" y2="82" stroke="#2b1838" stroke-width="5"/>
+        <rect x="69" y="57" width="16" height="6" rx="2" fill="#2b1838"/>
+        <rect x="74" y="52" width="6" height="16" rx="2" fill="#2b1838"/>
+        <circle cx="94" cy="54" r="3.6" fill="#35e3a4"/>
+        <circle cx="94" cy="66" r="3.6" fill="#ff3b5c"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Rare Side Effects Studio home">
+      <svg aria-hidden="true"><use href="#mark"/></svg>
+      <span>Rare Side Effects<small>Studio</small></span>
+    </a>
+    <div class="navlinks">
+      <a href="#games">Games</a>
+      <a href="#side-effects">Side effects</a>
+      <a href="#doctor">About</a>
+      <a href="#follow">Follow</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Rare Side Effects Studio</span>
+      <h1 class="display">Prescribing<br><span class="rx">brainrot.</span></h1>
+      <p class="lead">Small, loud, free games from a doctor turned game dev. Tap, roll, mine, battle and collect a whole crew of chaotic characters. No real money, ever.</p>
+      <div class="ctas">
+        <a class="btn btn-pill" href="https://tap-tap-sahur.illinimd.workers.dev" target="_blank" rel="noopener">▶ Play Tap Tap Sahur</a>
+        <a class="btn btn-mint" href="https://brainrot-gem-quest.illinimd.workers.dev/" target="_blank" rel="noopener">▶ Play Brainrot Gem Quest</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img class="card c1" src="img/tts-key.webp" alt="" width="900" height="1612">
+      <img class="card c2" src="img/gq-key.webp" alt="" width="900" height="1600">
+      <svg class="floating-pill p1"><use href="#mark"/></svg>
+      <svg class="floating-pill p2"><use href="#mark"/></svg>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="games">
+  <div class="wrap">
+    <span class="kicker">Now dispensing</span>
+    <h2 class="display">Our games</h2>
+    <p class="sub">Both play right in your browser, on a phone, a tablet or a computer. Nothing to download.</p>
+
+    <article class="game tts" aria-labelledby="tts-title">
+      <div class="media">
+        <div class="phone">
+          <video src="video/tts-reel.mp4" poster="img/tts-tap.webp" autoplay muted loop playsinline preload="metadata" aria-label="Tap Tap Sahur gameplay"></video>
+        </div>
+        <div class="phone small"><img src="img/tts-wilds.webp" alt="Giant wilds landing during bonus rolls" loading="lazy" width="540" height="960"></div>
+      </div>
+      <div class="info">
+        <div class="logo-row">
+          <img src="img/tts-icon.png" alt="" width="256" height="256">
+          <div>
+            <h3 class="display" id="tts-title">Tap Tap Sahur</h3>
+            <span class="status live">Play free now</span>
+          </div>
+        </div>
+        <p class="tag">Tap Tronchetto. Fill the meter. Let the drums roll.</p>
+        <ul>
+          <li><span><b>Tap like crazy</b> to charge your rolls, and keep going for a Tap Frenzy.</span></li>
+          <li><span><b>Roll for credits</b> with cascades, giant wilds and boss bonus rounds.</span></li>
+          <li><span><b>Open packs and build a crew</b> that keeps earning while you're away.</span></li>
+          <li><span><b>A collection that takes about a month,</b> with camp trips, a lab and story chapters.</span></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-mint" href="https://tap-tap-sahur.illinimd.workers.dev" target="_blank" rel="noopener">▶ Play now</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="game gq flip" aria-labelledby="gq-title">
+      <div class="media">
+        <div class="phone">
+          <video src="video/gq-reel.mp4" poster="img/gq-mine.webp" autoplay muted loop playsinline preload="metadata" aria-label="Brainrot Gem Quest gameplay"></video>
+        </div>
+        <div class="phone small"><img src="img/gq-legendary.webp" alt="A Legendary card revealed from a crew pack" loading="lazy" width="540" height="960"></div>
+      </div>
+      <div class="info">
+        <div class="logo-row">
+          <img src="img/gq-icon.png" alt="" width="256" height="256">
+          <div>
+            <h3 class="display" id="gq-title">Brainrot Gem Quest</h3>
+            <span class="status live">Play free now</span>
+          </div>
+        </div>
+        <p class="tag">A brick breaker, a bubble shooter and a boss fight walk into a mine…</p>
+        <ul>
+          <li><span><b>Mine</b> walls of gems with exploding, lightning and multiball bricks.</span></li>
+          <li><span><b>Refine</b> your haul in a bubble shooter before the field crushes you.</span></li>
+          <li><span><b>Battle</b> bosses: parry, swipe and combo, then seal the ring to catch them.</span></li>
+          <li><span><b>Collect</b> a crew from packs, travel a world tour and brawl other players.</span></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-mint" href="https://brainrot-gem-quest.illinimd.workers.dev/" target="_blank" rel="noopener">▶ Play now</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="strip" role="list" aria-label="Screenshots">
+      <figure role="listitem"><img src="img/tts-tap.webp" alt="Tapping Tronchetto" loading="lazy" width="540" height="960"><figcaption>Tap Frenzy</figcaption></figure>
+      <figure role="listitem"><img src="img/gq-mine.webp" alt="The gem mine brick breaker" loading="lazy" width="540" height="960"><figcaption>The Mine</figcaption></figure>
+      <figure role="listitem"><img src="img/tts-drums.webp" alt="Five Sahur Drums on the reels" loading="lazy" width="540" height="960"><figcaption>5 Sahur Drums</figcaption></figure>
+      <figure role="listitem"><img src="img/gq-refine.webp" alt="The bubble refinery" loading="lazy" width="540" height="960"><figcaption>Bubble Refinery</figcaption></figure>
+      <figure role="listitem"><img src="img/tts-pack.webp" alt="A new crew member from a Boss Box" loading="lazy" width="540" height="960"><figcaption>Boss Box pull</figcaption></figure>
+      <figure role="listitem"><img src="img/gq-capture.webp" alt="Sealing the capture ring" loading="lazy" width="540" height="960"><figcaption>Seal the Ring</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="side-effects">
+  <div class="wrap">
+    <span class="kicker">Please read the label</span>
+    <h2 class="display">Side effects may include</h2>
+    <div class="label">
+      <div class="rx-big" aria-hidden="true">℞</div>
+      <div>
+        <h3>Take one game daily. Or forty.</h3>
+        <ul>
+          <li>Uncontrollable tapping</li>
+          <li>Yelling "LEGENDARY" at 2 a.m.</li>
+          <li>Naming your houseplants after bosses</li>
+          <li>Hearing drums when there are no drums</li>
+          <li>A sudden urge to collect everything</li>
+          <li>Parrying things in real life</li>
+        </ul>
+        <p class="fine">Not real medical advice. Real side effects are rare, which is the whole joke. Ask your doctor if brainrot is right for you (spoiler: yes).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="doctor">
+  <div class="wrap">
+    <div class="badge" aria-hidden="true"><svg viewBox="0 0 120 120"><use href="#mark"/></svg></div>
+    <div>
+      <span class="kicker">The studio</span>
+      <h2 class="display">Hi, I'm Dr.Dev.</h2>
+      <p class="sub">I'm a doctor turned game dev, and Rare Side Effects is my one-person studio. I make the kind of games I'd want to play on a break: quick to pick up, hard to put down, and silly on purpose.</p>
+      <div class="promise">
+        <span>💊 Free to play</span>
+        <span>🚫 No real-money purchases</span>
+        <span>🔒 No personal data collected</span>
+        <span>💬 No chat with strangers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="follow">
+  <div class="wrap">
+    <span class="kicker">Refills weekly</span>
+    <h2 class="display">Follow the studio</h2>
+    <p class="sub">New clips, sneak peeks and updates for both games.</p>
+    <div class="socials">
+      <a class="btn btn-pill" href="https://www.tiktok.com/@raresideeffectsstudio" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9a7.4 7.4 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.2-1.5z"/></svg>
+        TikTok
+      </a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/raresideeffectsstudio/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 8c-.1-1.6-.4-3-1.6-4.2S17.6 2.2 16 2.1c-1.6-.1-6.4-.1-8 0-1.6.1-3 .4-4.2 1.6S2.2 6.4 2.1 8c-.1 1.6-.1 6.4 0 8 .1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.4 0-8zm-2 9.7a3.3 3.3 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4a3.3 3.3 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7a3.3 3.3 0 0 1 1.8-1.8c1.3-.5 4.3-.4 5.7-.4s4.4-.1 5.7.4a3.3 3.3 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.4-.4 5.7z"/></svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Rare Side Effects Studio</span>
+    <div class="legal">
+      <a href="https://tap-tap-sahur.illinimd.workers.dev/privacy.html" target="_blank" rel="noopener">Tap Tap Sahur privacy</a>
+      <a href="https://brainrot-gem-quest.illinimd.workers.dev/privacy" target="_blank" rel="noopener">Brainrot Gem Quest privacy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

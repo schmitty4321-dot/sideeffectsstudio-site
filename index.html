@@ -11,7 +11,8 @@
 <meta property="og:url" content="https://sideeffectsstudio.buzz/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#160b30">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/logo-mark-64.png" type="image/png">
+<link rel="apple-touch-icon" href="img/logo-mark-256.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
@@ -36,7 +37,8 @@ a { color: inherit; }
 body > nav { position: sticky; top: 0; z-index: 20; background: #160b30e6; backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 body > nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-size: 20px; white-space: nowrap; }
-.brand svg { width: 38px; height: 38px; flex: none; }
+.brand-tile { width: 42px; height: 42px; flex: none; border-radius: 12px; background: #fff; display: grid; place-items: center; box-shadow: 0 4px 12px #0005; }
+.brand-tile img { width: 36px; height: 36px; }
 .brand small { display: block; font: 600 11px/1 var(--body); color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
 .navlinks { display: flex; gap: 22px; }
 .navlinks a { text-decoration: none; color: var(--muted); font-size: 15px; }
@@ -67,9 +69,9 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 .hero-art .card { position: absolute; width: 230px; border-radius: 26px; overflow: hidden; box-shadow: 0 30px 60px #0008; border: 4px solid #ffffff22; }
 .hero-art .c1 { left: 13%; top: 30px; transform: rotate(-8deg); }
 .hero-art .c2 { right: 2%; top: 0; transform: rotate(7deg); }
-.hero-art .floating-pill { position: absolute; width: 74px; height: 74px; filter: drop-shadow(0 10px 18px #0007); animation: bob 5s ease-in-out infinite; }
+.hero-art .floating-pill { position: absolute; width: 96px; height: 96px; filter: drop-shadow(0 10px 18px #0007); animation: bob 5s ease-in-out infinite; }
 .hero-art .p1 { left: 44%; top: 330px; animation-delay: -1s; }
-.hero-art .p2 { left: -2%; top: -10px; width: 52px; height: 52px; animation-delay: -2.5s; }
+.hero-art .p2 { left: -2%; top: -10px; width: 64px; height: 64px; animation-delay: -2.5s; }
 @keyframes bob { 0%, 100% { translate: 0 0; rotate: -12deg; } 50% { translate: 0 -16px; rotate: 10deg; } }
 @media (max-width: 860px) {
   .hero { padding: 40px 0 64px; }
@@ -135,11 +137,11 @@ h2 { font-size: clamp(38px, 5.5vw, 60px); margin: 8px 0 14px; }
 
 /* ---------- doctor ---------- */
 #doctor .wrap { display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; }
-.badge { width: 170px; height: 170px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 30% 30%, #3b2370, #1d0f3c); border: 3px solid #ffffff22; box-shadow: 0 20px 40px #0007; }
-.badge svg { width: 104px; height: 104px; }
+.badge { width: 230px; border-radius: 28px; padding: 18px; background: #fff; box-shadow: 0 20px 40px #0007; transform: rotate(-2deg); }
+.badge img { width: 100%; }
 .promise { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 .promise span { padding: 8px 14px; border-radius: 999px; background: #ffffff10; font-size: 15px; }
-@media (max-width: 720px) { #doctor .wrap { grid-template-columns: 1fr; } .badge { width: 130px; height: 130px; } }
+@media (max-width: 720px) { #doctor .wrap { grid-template-columns: 1fr; } .badge { width: 180px; } }
 
 /* ---------- follow ---------- */
 #follow { text-align: center; background: radial-gradient(60% 80% at 50% 100%, #ff3b5c22, transparent 70%); }
@@ -161,29 +163,10 @@ footer a { color: var(--muted); }
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <!-- the studio mark: a capsule whose cream half is a game controller -->
-    <symbol id="mark" viewBox="0 0 120 120">
-      <g transform="rotate(-35 60 60)">
-        <rect x="14" y="38" width="92" height="44" rx="22" fill="#fff1d6"/>
-        <path d="M36 38h24v44H36a22 22 0 0 1 0-44z" fill="#ff3b5c"/>
-        <rect x="24" y="44" width="30" height="7" rx="3.5" fill="#fff" opacity=".35"/>
-        <rect x="14" y="38" width="92" height="44" rx="22" fill="none" stroke="#2b1838" stroke-width="5"/>
-        <line x1="60" y1="38" x2="60" y2="82" stroke="#2b1838" stroke-width="5"/>
-        <rect x="69" y="57" width="16" height="6" rx="2" fill="#2b1838"/>
-        <rect x="74" y="52" width="6" height="16" rx="2" fill="#2b1838"/>
-        <circle cx="94" cy="54" r="3.6" fill="#35e3a4"/>
-        <circle cx="94" cy="66" r="3.6" fill="#ff3b5c"/>
-      </g>
-    </symbol>
-  </defs>
-</svg>
-
 <nav aria-label="Main">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Rare Side Effects Studio home">
-      <svg aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand-tile"><img src="img/logo-mark-64.png" alt="" width="64" height="64"></span>
       <span>Rare Side Effects<small>Studio</small></span>
     </a>
     <div class="navlinks">
@@ -209,8 +192,8 @@ footer a { color: var(--muted); }
     <div class="hero-art" aria-hidden="true">
       <img class="card c1" src="img/tts-key.webp" alt="" width="900" height="1612">
       <img class="card c2" src="img/gq-key.webp" alt="" width="900" height="1600">
-      <svg class="floating-pill p1"><use href="#mark"/></svg>
-      <svg class="floating-pill p2"><use href="#mark"/></svg>
+      <img class="floating-pill p1" src="img/logo-mark-256.png" alt="" width="256" height="256">
+      <img class="floating-pill p2" src="img/logo-mark-256.png" alt="" width="256" height="256">
     </div>
   </div>
 </header>
@@ -313,7 +296,7 @@ footer a { color: var(--muted); }
 
 <section id="doctor">
   <div class="wrap">
-    <div class="badge" aria-hidden="true"><svg viewBox="0 0 120 120"><use href="#mark"/></svg></div>
+    <div class="badge"><img src="img/logo-full.png" alt="Rare Side Effects Studio logo" width="705" height="720"></div>
     <div>
       <span class="kicker">The studio</span>
       <h2 class="display">Hi, I'm Dr.Dev.</h2>

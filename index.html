@@ -94,6 +94,7 @@ h2 { font-size: clamp(38px, 5.5vw, 60px); margin: 8px 0 14px; }
 .game::before { content: ''; position: absolute; inset: 0; background: radial-gradient(70% 80% at 0% 0%, var(--glow), transparent 60%); pointer-events: none; }
 .game.tts { --glow: #ffb02e2b; --accent: var(--gold); }
 .game.gq { --glow: #8f5cff33; --accent: #c39bff; }
+.game.hg { --glow: #4fc3ff2e; --accent: #8fd8ff; }
 .game.flip .media { order: 2; }
 .game .info { position: relative; }
 .game .logo-row { display: flex; align-items: center; gap: 14px; }
@@ -203,7 +204,7 @@ footer a { color: var(--muted); }
   <div class="wrap">
     <span class="kicker">Now dispensing</span>
     <h2 class="display">Our games</h2>
-    <p class="sub">Both play right in your browser, on a phone, a tablet or a computer. Nothing to download.</p>
+    <p class="sub">They play right in your browser, on a phone, a tablet or a computer. Nothing to download.</p>
 
     <article class="game tts" aria-labelledby="tts-title">
       <div class="media">
@@ -261,6 +262,31 @@ footer a { color: var(--muted); }
       </div>
     </article>
 
+    <article class="game hg" aria-labelledby="hg-title">
+      <div class="media">
+        <div class="phone">
+          <video src="video/hg-reel.mp4" poster="img/hg-board.webp" autoplay muted loop playsinline preload="metadata" aria-label="Hatch &amp; Grow gameplay"></video>
+        </div>
+        <div class="phone small"><img src="img/hg-legend.webp" alt="A character grown all the way up to Legend" loading="lazy" width="540" height="960"></div>
+      </div>
+      <div class="info">
+        <div class="logo-row">
+          <img src="img/hg-icon.png" alt="" width="256" height="256">
+          <div>
+            <h3 class="display" id="hg-title">Hatch &amp; Grow</h3>
+            <span class="status soon">Coming soon to CrazyGames</span>
+          </div>
+        </div>
+        <p class="tag">Hatch an egg. Merge a pair. Watch them grow up.</p>
+        <ul>
+          <li><span><b>Hatch and merge</b> matching characters to grow them from Baby to Kid, Teen, Adult and Legend.</span></li>
+          <li><span><b>Fill orders</b> for the neighbours on Sahur Street and unlock new spots on the board.</span></li>
+          <li><span><b>Earn while you're away,</b> and send grown-ups on trips that mail home postcards.</span></li>
+          <li><span><b>Defend the street</b> from each zone's boss, and race the week's Egg Rush leaderboard.</span></li>
+        </ul>
+      </div>
+    </article>
+
     <div class="strip" role="list" aria-label="Screenshots">
       <figure role="listitem"><img src="img/tts-tap.webp" alt="Tapping Tronchetto" loading="lazy" width="540" height="960"><figcaption>Tap Frenzy</figcaption></figure>
       <figure role="listitem"><img src="img/gq-mine.webp" alt="The gem mine brick breaker" loading="lazy" width="540" height="960"><figcaption>The Mine</figcaption></figure>
@@ -268,6 +294,8 @@ footer a { color: var(--muted); }
       <figure role="listitem"><img src="img/gq-refine.webp" alt="The bubble refinery" loading="lazy" width="540" height="960"><figcaption>Bubble Refinery</figcaption></figure>
       <figure role="listitem"><img src="img/tts-pack.webp" alt="A new crew member from a Boss Box" loading="lazy" width="540" height="960"><figcaption>Boss Box pull</figcaption></figure>
       <figure role="listitem"><img src="img/gq-capture.webp" alt="Sealing the capture ring" loading="lazy" width="540" height="960"><figcaption>Seal the Ring</figcaption></figure>
+      <figure role="listitem"><img src="img/hg-merge.webp" alt="Merging two matching characters so they grow up" loading="lazy" width="540" height="960"><figcaption>Merge to grow</figcaption></figure>
+      <figure role="listitem"><img src="img/hg-rush.webp" alt="An Egg Rush round with a combo" loading="lazy" width="540" height="960"><figcaption>Egg Rush</figcaption></figure>
     </div>
   </div>
 </section>

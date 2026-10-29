@@ -95,6 +95,7 @@ h2 { font-size: clamp(38px, 5.5vw, 60px); margin: 8px 0 14px; }
 .game.tts { --glow: #ffb02e2b; --accent: var(--gold); }
 .game.gq { --glow: #8f5cff33; --accent: #c39bff; }
 .game.hg { --glow: #4fc3ff2e; --accent: #8fd8ff; }
+.game.pe { --glow: #7bd34a2e; --accent: #a6e36f; }
 .game.flip .media { order: 2; }
 .game .info { position: relative; }
 .game .logo-row { display: flex; align-items: center; gap: 14px; }
@@ -114,11 +115,14 @@ h2 { font-size: clamp(38px, 5.5vw, 60px); margin: 8px 0 14px; }
 .phone.small { width: 150px; margin-top: 70px; transform: rotate(4deg); border-radius: 24px; padding: 6px; }
 .phone.small img { border-radius: 19px; }
 .game.flip .phone.small { transform: rotate(-4deg); }
+.phone.wide { width: min(100%, 560px); aspect-ratio: 16 / 9; border-radius: 26px; padding: 8px; }
+.phone.wide img { border-radius: 19px; }
 @media (max-width: 860px) {
   .game { grid-template-columns: 1fr; gap: 28px; padding: 24px 20px 28px; }
   .game.flip .media { order: 0; }
   .phone { width: 200px; }
   .phone.small { width: 110px; margin-top: 54px; }
+  .phone.wide { width: 100%; }
 }
 
 /* ---------- screenshots strip ---------- */
@@ -288,6 +292,28 @@ footer a { color: var(--muted); }
         <div class="ctas">
           <a class="btn btn-mint" href="https://hatch-and-grow.illinimd.workers.dev/" target="_blank" rel="noopener">▶ Play now</a>
         </div>
+      </div>
+    </article>
+
+    <article class="game pe flip" aria-labelledby="pe-title">
+      <div class="media">
+        <div class="phone wide"><img src="img/pe-splash.webp" alt="Pocket Exfil: a chibi soldier hauling a loot case to the extraction helicopter" loading="lazy" width="1280" height="720"></div>
+      </div>
+      <div class="info">
+        <div class="logo-row">
+          <img src="img/pe-icon.png" alt="" width="256" height="256">
+          <div>
+            <h3 class="display" id="pe-title">Pocket Exfil</h3>
+            <span class="status soon">Coming soon</span>
+          </div>
+        </div>
+        <p class="tag">Drop in. Grab the loot. Get out alive.</p>
+        <ul>
+          <li><span><b>Short raids</b> as a chunky toy soldier: sneak or shoot past guard squads, then race to an exit before time runs out.</span></li>
+          <li><span><b>Whatever you carry out is yours</b> to keep, sell or trade. Go down, and you lose your backpack.</span></li>
+          <li><span><b>Five camo teams,</b> each with its own ability, plus perk trees, skins and daily challenges.</span></li>
+          <li><span><b>Five maps and a boss for each,</b> from a farm compound to a snowy radar outpost.</span></li>
+        </ul>
       </div>
     </article>
 

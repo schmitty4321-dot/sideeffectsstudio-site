@@ -52,6 +52,10 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .btn-pill { background: var(--pill); color: #fff; box-shadow: 0 6px 0 #a3182f, 0 14px 30px #ff3b5c55; }
 .btn-mint { background: var(--mint); color: #08321f; box-shadow: 0 6px 0 #17946a, 0 14px 30px #35e3a440; }
+.btn-gold { background: var(--gold); color: #3a2400; box-shadow: 0 6px 0 #b8901a, 0 14px 30px #ffd54a40; }
+.btn-lime { background: #8fd14f; color: #173008; box-shadow: 0 6px 0 #4f8a22, 0 14px 30px #8fd14f40; }
+.btn-orange { background: #ff9b3d; color: #3a1700; box-shadow: 0 6px 0 #c2611a, 0 14px 30px #ff9b3d40; }
+.btn-sky { background: var(--sky); color: #06243a; box-shadow: 0 6px 0 #2f7fb8, 0 14px 30px #6fc3ff40; }
 .btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px #ffffff40; }
 .btn-ghost:hover { box-shadow: inset 0 0 0 2px #ffffffa0; }
 
@@ -66,20 +70,28 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 .hero p.lead { font-size: clamp(18px, 2.2vw, 22px); color: var(--muted); max-width: 30em; margin: 0 0 28px; }
 .ctas { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-art { position: relative; height: 460px; }
-.hero-art .card { position: absolute; width: 230px; border-radius: 26px; overflow: hidden; box-shadow: 0 30px 60px #0008; border: 4px solid #ffffff22; }
-.hero-art .c1 { left: 13%; top: 30px; transform: rotate(-8deg); }
-.hero-art .c2 { right: 2%; top: 0; transform: rotate(7deg); }
+/* all six games, two rows of three, each tilted a little; the one under the pointer straightens up */
+.hero-art { height: auto !important; max-width: 500px; width: 100%; justify-self: center; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px 16px; padding: 12px 0; }
+.hero-art .card { position: relative; width: 100%; height: auto; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 40px #0009; border: 3px solid #ffffff22;
+  transform: translateY(var(--t)) rotate(var(--r)); transition: transform .2s ease; }
+.hero-art .card:hover { transform: translateY(calc(var(--t) - 10px)) rotate(0) scale(1.05); z-index: 2; }
+.hero-art .c1 { --t: 10px; --r: -5deg; }
+.hero-art .c2 { --t: -6px; --r: 2deg; }
+.hero-art .c3 { --t: 12px; --r: 6deg; }
+.hero-art .c4 { --t: 0px; --r: -4deg; }
+.hero-art .c5 { --t: 14px; --r: 3deg; }
+.hero-art .c6 { --t: 2px; --r: -6deg; }
+.hero-art .floating-pill { z-index: 3; }
 .hero-art .floating-pill { position: absolute; width: 96px; height: 96px; filter: drop-shadow(0 10px 18px #0007); animation: bob 5s ease-in-out infinite; }
-.hero-art .p1 { left: 44%; top: 330px; animation-delay: -1s; }
+.hero-art .p1 { left: -52px; bottom: -40px; animation-delay: -1s; }
 .hero-art .p2 { left: -2%; top: -10px; width: 64px; height: 64px; animation-delay: -2.5s; }
 @keyframes bob { 0%, 100% { translate: 0 0; rotate: -12deg; } 50% { translate: 0 -16px; rotate: 10deg; } }
 @media (max-width: 860px) {
   .hero { padding: 40px 0 64px; }
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-art { height: 340px; }
-  .hero-art .card { width: 170px; }
-  .hero-art .c1 { left: 6%; } .hero-art .c2 { right: 6%; }
-  .hero-art .p1 { top: 250px; }
+  .hero-art { max-width: 460px; gap: 16px 12px; }
+  .hero-art .p1 { left: -6px; bottom: -40px; width: 64px; height: 64px; }
 }
 
 /* ---------- section heads ---------- */
@@ -193,15 +205,19 @@ footer a { color: var(--muted); }
       <div class="ctas">
         <a class="btn btn-pill" href="https://taptapsahur.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Tap Tap Sahur</a>
         <a class="btn btn-mint" href="https://gemquest.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Brainrot Gem Quest</a>
-        <a class="btn btn-ghost" href="https://hatchandgrow.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Hatch &amp; Grow</a>
-        <a class="btn btn-ghost" href="https://pocketexfil.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Pocket Exfil</a>
-        <a class="btn btn-ghost" href="https://bumpercrop.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Bumper Crop</a>
-        <a class="btn btn-ghost" href="https://pocketacres.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Pocket Acres</a>
+        <a class="btn btn-gold" href="https://hatchandgrow.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Hatch &amp; Grow</a>
+        <a class="btn btn-lime" href="https://pocketexfil.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Pocket Exfil</a>
+        <a class="btn btn-orange" href="https://bumpercrop.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Bumper Crop</a>
+        <a class="btn btn-sky" href="https://pocketacres.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Pocket Acres</a>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
-      <img class="card c1" src="img/tts-key.webp" alt="" width="900" height="1612">
+      <img class="card c1" src="img/tts-key.webp" alt="" width="900" height="1600">
       <img class="card c2" src="img/gq-key.webp" alt="" width="900" height="1600">
+      <img class="card c3" src="img/hg-key.webp" alt="" width="900" height="1600">
+      <img class="card c4" src="img/pe-key.webp" alt="" width="900" height="1600">
+      <img class="card c5" src="img/bc-splash.webp" alt="" width="900" height="1600">
+      <img class="card c6" src="img/pa-key.webp" alt="" width="900" height="1600">
       <img class="floating-pill p1" src="img/logo-mark-256.png" alt="" width="256" height="256">
       <img class="floating-pill p2" src="img/logo-mark-256.png" alt="" width="256" height="256">
     </div>

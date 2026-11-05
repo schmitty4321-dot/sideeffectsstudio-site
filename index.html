@@ -57,6 +57,7 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 .btn-orange { background: #ff9b3d; color: #3a1700; box-shadow: 0 6px 0 #c2611a, 0 14px 30px #ff9b3d40; }
 .btn-sky { background: var(--sky); color: #06243a; box-shadow: 0 6px 0 #2f7fb8, 0 14px 30px #6fc3ff40; }
 .btn-sand { background: #e8b06a; color: #3a1f06; box-shadow: 0 6px 0 #a8692a, 0 14px 30px #e8b06a40; }
+.btn-red { background: #e2483a; color: #fff; box-shadow: 0 6px 0 #9c2a20, 0 14px 30px #e2483a40; }
 .btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px #ffffff40; }
 .btn-ghost:hover { box-shadow: inset 0 0 0 2px #ffffffa0; }
 
@@ -105,6 +106,7 @@ h2 { font-size: clamp(38px, 5.5vw, 60px); margin: 8px 0 14px; }
 .game.hg { --glow: #4fc3ff2e; --accent: #8fd8ff; }
 .game.pe { --glow: #7bd34a2e; --accent: #a6e36f; }
 .game.cc { --glow: #ff9b3d2e; --accent: #ffc27a; }
+.game.tw { --glow: #e2483a2e; --accent: #ff9a8f; }
 .game.flip .media { order: 2; }
 .game .info { position: relative; }
 .game .logo-row { display: flex; align-items: center; gap: 14px; }
@@ -207,6 +209,7 @@ footer a { color: var(--muted); }
         <a class="btn btn-orange" href="https://bumpercrop.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Bumper Crop</a>
         <a class="btn btn-sky" href="https://pocketacres.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Pocket Acres</a>
         <a class="btn btn-sand" href="https://caravancartel.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Caravan Cartel</a>
+        <a class="btn btn-red" href="https://townwars.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Town Wars</a>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -420,6 +423,32 @@ footer a { color: var(--muted); }
         </ul>
         <div class="ctas">
           <a class="btn btn-mint" href="https://caravancartel.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play now</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="game tw" aria-labelledby="tw-title">
+      <div class="media">
+        <div class="phone"><img src="img/tw-map.webp" alt="Town Wars: Burlington, Vermont drawn as a sticker-style kingdom, with farms, woods, fishing spots and landmarks to claim" loading="lazy" width="540" height="960"></div>
+        <div class="phone small"><img src="img/tw-camps.webp" alt="A lumber camp and a fishing dock on the real map, each with a bubble saying it's ready to collect" loading="lazy" width="540" height="960"></div>
+      </div>
+      <div class="info">
+        <div class="logo-row">
+          <img src="img/tw-icon.png" alt="" width="256" height="256">
+          <div>
+            <h3 class="display" id="tw-title">Town Wars</h3>
+            <span class="status soon">Early test: play free</span>
+          </div>
+        </div>
+        <p class="tag">Your real town is the map. Turn it into a kingdom.</p>
+        <ul>
+          <li><span><b>Find your own town.</b> Its real parks become farms, woods become lumber camps, lakes become fishing docks, and City Hall becomes your castle.</span></li>
+          <li><span><b>Build camps and tap to collect</b> food, wood, stone and gold, then grow your castle, granary, barracks and walls.</span></li>
+          <li><span><b>Train Pitchfork Peasants.</b> Every soldier eats, so a bigger army needs more farms.</span></li>
+          <li><span><b>Coming next:</b> raid the town next door. Your whole town is one team, and only your town is ever saved, never where you are.</span></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-mint" href="https://townwars.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play now</a>
         </div>
       </div>
     </article>

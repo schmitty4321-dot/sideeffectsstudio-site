@@ -26,7 +26,7 @@
       <span class="brand-tile"><img src="/img/logo-mark-64.png" alt="" width="64" height="64"></span>
       <span>Rare Side Effects<small>Studio</small></span>
     </a>
-    <div class="navlinks"><a href="/#games">Games</a><a href="/about">About</a><a href="/contact">Contact</a></div>
+    <div class="navlinks"><a href="/#games">Games</a><a href="/devlog">Devlog</a><a href="/about">About</a><a href="/contact">Contact</a></div>
   </div>
 </nav>
 <main>
@@ -36,12 +36,12 @@
   <p class="lead">What this website and our games collect, what they don't, and how ads work here.</p>
 </div></header>
 <div class="wrap prose">
-  <p class="updated">Last updated: October 29, 2026</p>
+  <p class="updated">Last updated: November 10, 2026</p>
   <p>Rare Side Effects Studio ("we", "us") makes free browser games. This policy covers this website, <b>sideeffectsstudio.buzz</b>, and our games at their addresses on this domain. Some games also have their own privacy policy with the details for that game (linked below).</p>
 
   <h2>The short version</h2>
   <ul>
-    <li>You never need an account, and we never ask for your name, email, age or location.</li>
+    <li>You never need an account, and we never ask for your name, email or age. One game, Town Wars, can use your location, but only if you allow it, and it's rounded to about 1 km before it leaves your device (see "Town Wars and your location" below).</li>
     <li>Your game progress is saved in your own browser, not on our servers.</li>
     <li>We never sell personal information.</li>
     <li>Nothing in our games costs real money.</li>
@@ -56,6 +56,14 @@
     <li><b>Saves:</b> progress is stored in your browser's local storage on your own device. Clearing your browser's site data erases it.</li>
     <li><b>Online features:</b> a few features talk to our own server on Cloudflare, such as the Egg Rush leaderboard in Hatch &amp; Grow and battles against other players in Brainrot Gem Quest. They use a random player ID made by the game, a made-up nickname and your scores or team. They don't use your name or contact details.</li>
     <li><b>No chat:</b> there's no chat or messaging between players.</li>
+  </ul>
+  <h2 id="town-wars">Town Wars and your location</h2>
+  <p>Town Wars turns your real town into the game board, using map data from <b>OpenStreetMap</b>. Here's exactly what it uses:</p>
+  <ul>
+    <li><b>Finding your town:</b> you can type a town's name, or tap "Find my town" and allow location. With location, the game rounds your position to about 1 km and sends only that rounded point once to <b>Nominatim</b>, OpenStreetMap's place-lookup service, to learn which town you're in. Typed searches go to Nominatim too. The rounded point isn't saved.</li>
+    <li><b>Walking to places (optional):</b> if you choose to claim a place in person, the game checks your precise location on your phone to see if you're close. That precise location stays on your phone.</li>
+    <li><b>Map pictures:</b> the map is drawn from <b>OpenFreeMap</b> tiles, and the map software loads from <b>unpkg</b>. Like any website, these services see your IP address and which part of the map is being loaded.</li>
+    <li>Your kingdom is saved in your browser, like our other games. Walking is never required: everything can also be done from home.</li>
   </ul>
   <p>Details for each game:</p>
   <ul><li><a href="https://taptapsahur.sideeffectsstudio.buzz/privacy.html">Tap Tap Sahur privacy policy</a></li><li><a href="https://gemquest.sideeffectsstudio.buzz/privacy">Brainrot Gem Quest privacy policy</a></li><li><a href="https://hatch-and-grow-leaderboard.illinimd.workers.dev/privacy">Hatch &amp; Grow privacy policy</a></li></ul>
@@ -91,6 +99,8 @@
   <div class="wrap">
     <span>© 2026 Rare Side Effects Studio</span>
     <div class="legal">
+      <a href="/devlog">Devlog</a>
+      <a href="/stories">Stories</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
       <a href="/privacy">Privacy policy</a>

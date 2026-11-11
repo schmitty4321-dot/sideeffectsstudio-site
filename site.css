@@ -63,7 +63,7 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 
 /* game pages */
 .game-page { --glow: #8f5cff33; }
-.game-page.tts { --glow: #ffb02e33; } .game-page.gq { --glow: #8f5cff3a; } .game-page.hg { --glow: #4fc3ff33; } .game-page.pe { --glow: #7bd34a33; }
+.game-page.tts { --glow: #ffb02e33; } .game-page.gq { --glow: #8f5cff3a; } .game-page.hg { --glow: #4fc3ff33; } .game-page.pe { --glow: #7bd34a33; } .game-page.bc { --glow: #ffb02e2e; } .game-page.pa { --glow: #6fc3ff2e; } .game-page.cc { --glow: #ff9b3d33; } .game-page.tw { --glow: #ff5a5a2e; }
 .shots { display: flex; gap: 16px; overflow-x: auto; padding: 8px 2px 18px; scroll-snap-type: x mandatory; }
 .shots figure { margin: 0; flex: none; width: 200px; scroll-snap-align: start; }
 .shots.wide figure { width: min(520px, 86vw); }
@@ -86,3 +86,29 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 footer .legal { display: flex; flex-wrap: wrap; gap: 18px; }
 footer a { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+
+/* guides: questions that open on tap, and a short "for parents" box */
+.faq { margin: 14px 0; }
+.faq details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 4px 18px; margin: 10px 0; }
+.faq summary { cursor: pointer; padding: 12px 0; font-weight: 600; color: var(--ink); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--gold); font-family: var(--display); font-size: 22px; line-height: 1; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: 0 0 14px; }
+.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+.toc a { display: inline-block; padding: 6px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--muted); text-decoration: none; font-size: 14px; }
+.toc a:hover { color: var(--ink); }
+
+/* devlog and stories: lists of posts, and the line under a post's title */
+.post-list { display: grid; gap: 14px; margin: 8px 0 64px; padding: 0; list-style: none; }
+.post-list a { display: grid; grid-template-columns: 64px 1fr; gap: 16px; align-items: center; padding: 16px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); color: var(--ink); text-decoration: none; }
+.post-list a:hover { border-color: #ffffff40; }
+.post-list img { width: 64px; height: 64px; border-radius: 14px; }
+.post-list b { display: block; font-family: var(--display); font-weight: 400; font-size: 21px; line-height: 1.15; letter-spacing: .3px; }
+.post-list span { display: block; color: var(--muted); font-size: 15px; margin-top: 4px; }
+.post-list time { color: var(--gold); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+.post-meta { color: var(--muted); font-size: 15px; margin: 0; }
+.post-meta time { color: var(--gold); }
+.prose figure.wide { margin: 24px 0; max-width: 760px; }
+.prose figure.wide img { border-radius: 18px; border: 3px solid #ffffff1c; width: 100%; }
+.prose figure.wide figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }

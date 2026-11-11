@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I let a robot play first · Rare Side Effects Studio</title>
+<meta name="description" content="Before anyone plays a new Rare Side Effects game, a small program plays it on fast-forward. How bot playtests keep prices, unlocks and choices fair, and what they cannot tell us.">
+<meta property="og:title" content="I let a robot play first">
+<meta property="og:description" content="Before anyone plays a new Rare Side Effects game, a small program plays it on fast-forward. How bot playtests keep prices, unlocks and choices fair, and what they cannot tell us.">
+<meta property="og:image" content="https://sideeffectsstudio.buzz/img/og.jpg">
+<meta property="og:url" content="https://sideeffectsstudio.buzz/stories/robot-plays-first">
+<link rel="canonical" href="https://sideeffectsstudio.buzz/stories/robot-plays-first">
+<meta name="theme-color" content="#160b30">
+<link rel="icon" href="/img/logo-mark-64.png" type="image/png">
+<link rel="apple-touch-icon" href="/img/logo-mark-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3165119131311933" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Rare Side Effects Studio home">
+      <span class="brand-tile"><img src="/img/logo-mark-64.png" alt="" width="64" height="64"></span>
+      <span>Rare Side Effects<small>Studio</small></span>
+    </a>
+    <div class="navlinks"><a href="/#games">Games</a><a href="/devlog">Devlog</a><a href="/about">About</a><a href="/contact">Contact</a></div>
+  </div>
+</nav>
+<main>
+<header class="page-head"><div class="wrap">
+  <span class="kicker"><a href="/stories" style="color:inherit;text-decoration:none">Stories</a> · Behind the scenes</span>
+  <h1 class="display">I let a robot play first</h1>
+  <p class="post-meta"><time datetime="2026-11-10">November 10, 2026</time> · by Dr.Dev</p>
+</div></header>
+<article class="wrap prose">
+  <p>Before you ever see a new game from this studio, a robot has already played it for hours. Not a real robot: a small program I write for each game that plays it on fast-forward, makes sensible choices, and writes down how long everything took. Here's why I do it, and what it has caught.</p>
+  <h2 id="why">Why a one-person studio needs a robot</h2>
+  <p>I'm one person, and most of my games are about progress: earning coins, unlocking places, upgrading things. The hardest part of that kind of game isn't the code or the art. It's the numbers. How much should the second camel cost? How fast should a field grow? When should the next map open?</p>
+  <p>Get those numbers wrong and the game breaks in quiet ways. Too generous, and you've seen everything in an hour and never come back. Too stingy, and you hit a wall on day two and give up. I can't play a game for a week every time I change a price, but a bot can play that week in a few seconds.</p>
+  <h2 id="how">How it works</h2>
+  <p>Every game keeps its rules separate from its pictures. The rules decide what things cost, what they earn and what happens next. The pictures just show it. Because the rules don't need a screen, the bot can run them directly, as fast as the computer allows, and play the way a careful player would: buy the upgrade that pays back fastest, take the better trade, keep everything busy.</p>
+  <p>When it's done, it prints a timeline. For <a href="/caravan-cartel">Caravan Cartel</a>, the bot's company reached Guild Rank 5 after about 16 minutes of game time, crossed into the Dune Sea at about 54 minutes, had found every place on the map at about 92 minutes, and reached Rank 10 at about four and a half hours. A real person stops to read, to think and to admire the camels, so you'll be slower than that, which is the point. If the bot can't reach something in a sensible time, nobody can.</p>
+  <h2 id="caught">What it catches</h2>
+  <p><b>Choices that aren't really choices.</b> In Caravan Cartel, the road from Wellspring to Saltby has a hot shortcut across the Salt Flats and a safer detour past a well. I wanted both to be worth taking. So the bot ran the same route for 30 minutes with three camels, three ways: the detour, the shortcut with just enough water, and the shortcut with spare water. Averaged over many runs it earned about 2,137 gold on the detour, 1,918 on the lean shortcut and 2,316 on the safe shortcut. Close on purpose: the shortcut wins if you plan your water, and the gamble of carrying too little doesn't pay. If one plan had earned double, everyone would use it and the choice would be fake.</p>
+  <p><b>Dead zones.</b> A dead zone is a stretch where there's nothing to buy and nothing new to see, and you just wait. On a timeline they're easy to spot: a long gap between two lines.</p>
+  <p><b>Goals nobody can finish.</b> In <a href="/town-wars">Town Wars</a>, an early pacing bot couldn't complete every goal, because special buildings were taking up the map spots it needed. I changed the rule so special buildings don't use those spots, and the bot finished all 20 goals.</p>
+  <h2 id="limits">What a robot can't tell me</h2>
+  <p>A bot can tell me if a game is fair. It can't tell me if it's fun. It doesn't laugh at a joke, get attached to a camel or feel the click of a good merge. So the robot plays first, and then people play, on real phones. Their notes are worth more than any timeline. If you have some, <a href="/contact">send them</a>.</p>
+  <p><a href="/stories">← All stories</a></p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Rare Side Effects Studio</span>
+    <div class="legal">
+      <a href="/devlog">Devlog</a>
+      <a href="/stories">Stories</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy policy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

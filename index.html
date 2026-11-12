@@ -58,6 +58,7 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 .btn-sky { background: var(--sky); color: #06243a; box-shadow: 0 6px 0 #2f7fb8, 0 14px 30px #6fc3ff40; }
 .btn-sand { background: #e8b06a; color: #3a1f06; box-shadow: 0 6px 0 #a8692a, 0 14px 30px #e8b06a40; }
 .btn-red { background: #e2483a; color: #fff; box-shadow: 0 6px 0 #9c2a20, 0 14px 30px #e2483a40; }
+.btn-ink { background: #ebe2cd; color: #1c1a17; box-shadow: 0 6px 0 #8f8574, 0 14px 30px #ebe2cd30; }
 .btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px #ffffff40; }
 .btn-ghost:hover { box-shadow: inset 0 0 0 2px #ffffffa0; }
 
@@ -107,6 +108,7 @@ h2 { font-size: clamp(38px, 5.5vw, 60px); margin: 8px 0 14px; }
 .game.pe { --glow: #7bd34a2e; --accent: #a6e36f; }
 .game.cc { --glow: #ff9b3d2e; --accent: #ffc27a; }
 .game.tw { --glow: #e2483a2e; --accent: #ff9a8f; }
+.game.sr { --glow: #ebe2cd26; --accent: #ebe2cd; }
 .game.flip .media { order: 2; }
 .game .info { position: relative; }
 .game .logo-row { display: flex; align-items: center; gap: 14px; }
@@ -215,6 +217,7 @@ footer a { color: var(--muted); }
         <a class="btn btn-sky" href="https://pocketacres.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Pocket Acres</a>
         <a class="btn btn-sand" href="https://caravancartel.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Caravan Cartel</a>
         <a class="btn btn-red" href="https://townwars.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Town Wars</a>
+        <a class="btn btn-ink" href="https://samurairunner.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Samurai Runner</a>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -458,6 +461,32 @@ footer a { color: var(--muted); }
         <div class="ctas">
           <a class="btn btn-mint" href="https://townwars.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play now</a>
           <a class="btn btn-ghost" href="/town-wars">How to play</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="game sr" aria-labelledby="sr-title">
+      <div class="media">
+        <div class="phone"><img src="img/sr-road.webp" alt="A ronin running up an ink-wash mountain road while archers loose red arrows at him" loading="lazy" width="540" height="960"></div>
+        <div class="phone small"><img src="img/sr-boss.webp" alt="The armored Bandit Chief boss at the end of the road" loading="lazy" width="540" height="960"></div>
+      </div>
+      <div class="info">
+        <div class="logo-row">
+          <img src="img/sr-icon.png" alt="" width="256" height="256">
+          <div>
+            <h3 class="display" id="sr-title">Samurai Runner</h3>
+            <span class="status soon">Early test: play free</span>
+          </div>
+        </div>
+        <p class="tag">A lone ronin, an ink-painted road, and everything on it wants him dead.</p>
+        <ul>
+          <li><span><b>Steer with one thumb.</b> Your blades fire on their own; dodge the red arrows, bones and charging riders.</span></li>
+          <li><span><b>Hold a second finger to draw your sword.</b> Time slows. Let go on the white flash for a perfect cut that splits arrows and bamboo.</span></li>
+          <li><span><b>Level up mid-fight</b> with bows, shuriken, talismans and a chain-sickle, then beat the boss at the end of every road.</span></li>
+          <li><span><b>Grow your village</b> between fights: weapon trees at the forge, training at the dojo, and spirit companions at the shrine.</span></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-mint" href="https://samurairunner.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play now</a>
         </div>
       </div>
     </article>

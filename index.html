@@ -58,6 +58,7 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 .btn-sky { background: var(--sky); color: #06243a; box-shadow: 0 6px 0 #2f7fb8, 0 14px 30px #6fc3ff40; }
 .btn-sand { background: #e8b06a; color: #3a1f06; box-shadow: 0 6px 0 #a8692a, 0 14px 30px #e8b06a40; }
 .btn-red { background: #e2483a; color: #fff; box-shadow: 0 6px 0 #9c2a20, 0 14px 30px #e2483a40; }
+.btn-copper { background: #e0823e; color: #2a1206; box-shadow: 0 6px 0 #9a4a18, 0 14px 30px #e0823e40; }
 .btn-ink { background: #ebe2cd; color: #1c1a17; box-shadow: 0 6px 0 #8f8574, 0 14px 30px #ebe2cd30; }
 .btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px #ffffff40; }
 .btn-ghost:hover { box-shadow: inset 0 0 0 2px #ffffffa0; }
@@ -108,6 +109,7 @@ h2 { font-size: clamp(38px, 5.5vw, 60px); margin: 8px 0 14px; }
 .game.pe { --glow: #7bd34a2e; --accent: #a6e36f; }
 .game.cc { --glow: #ff9b3d2e; --accent: #ffc27a; }
 .game.tw { --glow: #e2483a2e; --accent: #ff9a8f; }
+.game.dd { --glow: #ffcf3a26; --accent: #ffcf3a; }
 .game.sr { --glow: #ebe2cd26; --accent: #ebe2cd; }
 .game.flip .media { order: 2; }
 .game .info { position: relative; }
@@ -207,7 +209,7 @@ footer a { color: var(--muted); }
     <div>
       <span class="eyebrow">Rare Side Effects Studio</span>
       <h1 class="display">Prescribing<br><span class="rx">brainrot.</span></h1>
-      <p class="lead">Small, loud, free games from a doctor turned game dev. Tap, roll, mine, merge, farm, trade and battle, and collect a whole crew of chaotic characters along the way. No real money, ever.</p>
+      <p class="lead">Small, loud, free games from a doctor turned game dev. Tap, roll, dig, mine, merge, farm, trade and battle, and collect a whole crew of chaotic characters along the way. No real money, ever.</p>
       <div class="ctas">
         <a class="btn btn-pill" href="https://taptapsahur.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Tap Tap Sahur</a>
         <a class="btn btn-mint" href="https://gemquest.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Brainrot Gem Quest</a>
@@ -218,6 +220,7 @@ footer a { color: var(--muted); }
         <a class="btn btn-sand" href="https://caravancartel.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Caravan Cartel</a>
         <a class="btn btn-red" href="https://townwars.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Town Wars</a>
         <a class="btn btn-ink" href="https://samurairunner.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Samurai Runner</a>
+        <a class="btn btn-copper" href="https://digdeeper.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play DigDeeper</a>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -491,6 +494,33 @@ footer a { color: var(--muted); }
       </div>
     </article>
 
+    <article class="game dd flip" aria-labelledby="dd-title">
+      <div class="media">
+        <div class="phone"><img src="img/dd-mine.webp" alt="A cartoon dwarf tunnelling through orange clay full of coal, copper and tin" loading="lazy" width="540" height="960"></div>
+        <div class="phone small"><img src="img/dd-deep.webp" alt="Deep in the Crystal Caverns at 906 metres, with sapphires and gold" loading="lazy" width="540" height="960"></div>
+      </div>
+      <div class="info">
+        <div class="logo-row">
+          <img src="img/dd-icon.png" alt="" width="256" height="256">
+          <div>
+            <h3 class="display" id="dd-title">DigDeeper</h3>
+            <span class="status soon">Early test: play free</span>
+          </div>
+        </div>
+        <p class="tag">Grab a shovel. Dig down. There's no bottom.</p>
+        <ul>
+          <li><span><b>Dig through eight layers of rock,</b> from soft topsoil to crystal caverns and magma.</span></li>
+          <li><span><b>Tap out 15 minerals</b> from coal to diamonds, and follow rare glittering veins that get richer the deeper you go.</span></li>
+          <li><span><b>Haul it home and sell it,</b> smelt bars, and upgrade your shovel, pick, pack, lamp and lift.</span></li>
+          <li><span><b>Never get stuck.</b> Every step down leaves a ladder, and the Home button walks you back up.</span></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-mint" href="https://digdeeper.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play now</a>
+          <a class="btn btn-ghost" href="/dig-deeper">How to play</a>
+        </div>
+      </div>
+    </article>
+
     <div class="strip" role="list" aria-label="Screenshots">
       <figure role="listitem"><img src="img/tts-tap.webp" alt="Tapping Tronchetto" loading="lazy" width="540" height="960"><figcaption>Tap Frenzy</figcaption></figure>
       <figure role="listitem"><img src="img/gq-mine.webp" alt="The gem mine brick breaker" loading="lazy" width="540" height="960"><figcaption>The Mine</figcaption></figure>
@@ -510,6 +540,7 @@ footer a { color: var(--muted); }
     <h2 class="display">Devlog &amp; stories</h2>
     <p class="sub">What changed in each game lately, and how a one-person studio makes them.</p>
     <ul class="news-list">
+      <li><a href="/devlog/digdeeper-early-test">DigDeeper: a dwarf, a shovel and no bottom</a></li>
       <li><a href="/devlog/pocket-acres-seasons-and-winter-crops">What&#39;s new in Pocket Acres: seasons and winter crops</a></li>
       <li><a href="/devlog/town-wars-early-test">Town Wars: your real town, now with battles and daily quests</a></li>
       <li><a href="/devlog/caravan-cartel-launch">Caravan Cartel is out: water, camels and a desert tune</a></li>

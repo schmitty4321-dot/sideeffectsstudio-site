@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DigDeeper: a dwarf, a shovel and no bottom · Rare Side Effects Studio</title>
+<meta name="description" content="DigDeeper is out as an early test: a dig-down mining game with eight layers of rock, 15 minerals, rare branching veins and a Home button that walks you back up. Here's how it came together.">
+<meta property="og:title" content="DigDeeper: a dwarf, a shovel and no bottom">
+<meta property="og:description" content="DigDeeper is out as an early test: a dig-down mining game with eight layers of rock, 15 minerals, rare branching veins and a Home button that walks you back up. Here's how it came together.">
+<meta property="og:image" content="https://sideeffectsstudio.buzz/img/og.jpg">
+<meta property="og:url" content="https://sideeffectsstudio.buzz/devlog/digdeeper-early-test">
+<link rel="canonical" href="https://sideeffectsstudio.buzz/devlog/digdeeper-early-test">
+<meta name="theme-color" content="#160b30">
+<link rel="icon" href="/img/logo-mark-64.png" type="image/png">
+<link rel="apple-touch-icon" href="/img/logo-mark-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3165119131311933" crossorigin="anonymous"></script>
+</head>
+<body class="game-page dd">
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Rare Side Effects Studio home">
+      <span class="brand-tile"><img src="/img/logo-mark-64.png" alt="" width="64" height="64"></span>
+      <span>Rare Side Effects<small>Studio</small></span>
+    </a>
+    <div class="navlinks"><a href="/#games">Games</a><a href="/devlog">Devlog</a><a href="/about">About</a><a href="/contact">Contact</a></div>
+  </div>
+</nav>
+<main>
+<header class="page-head"><div class="wrap">
+  <span class="kicker"><a href="/devlog" style="color:inherit;text-decoration:none">Devlog</a> · DigDeeper</span>
+  <h1 class="display">DigDeeper: a dwarf, a shovel and no bottom</h1>
+  <p class="post-meta"><time datetime="2026-11-12">November 12, 2026</time> · by Dr.Dev</p>
+</div></header>
+<article class="wrap prose">
+  <p>DigDeeper is the newest game from the studio, and it's out today as an early test. It's a simple idea I've wanted to build for a while: a cartoon dwarf with a shovel, a hole in the ground, and no bottom. You dig, you tap out shiny rocks, you haul them home, and you buy a better shovel so you can dig deeper.</p>
+  <figure class="wide"><img src="/img/dd-devlog.webp" alt="Three phone screens from DigDeeper: tunnelling through clay, a silver vein in limestone, and the Crystal Caverns at 906 metres" loading="lazy"><figcaption>The clay, a silver vein and the Crystal Caverns, from the live game.</figcaption></figure>
+  <h2>Can't get stuck</h2>
+  <p>The first rule I set was that you should never be trapped in your own tunnel. Every step down leaves a ladder behind you, and a ladder that stops short still works from right under it. After a playtest I added a big <b>🏠 Home</b> button. It doesn't teleport you. It finds the quickest way up through the tunnels you've actually dug and walks your dwarf home a bit faster than normal. It's free from the start, because getting lost isn't fun.</p>
+  <h2>Eight layers of rock</h2>
+  <p>The ground goes Topsoil, Clay, Gravel, Limestone, Granite, Basalt, Crystal Caverns and Magma Rock, and each one is harder than the last. Your shovel decides where you can dig: one layer too hard is slow, two is a wall. There are seven shovels, from the one you start with to a Plasma Bore that gets through magma rock, and fifteen minerals spread down the layers, from coal near the top to diamonds below a kilometre.</p>
+  <p>Upgrades cost coins and minerals, and the later ones need bars from the smelter at Camp. That way the ore you dig up matters for more than its price, and the Trader screen reminds you to keep back what your next tool needs.</p>
+  <h2>The robot dug first</h2>
+  <p>Before anyone played it, I wrote a little robot that digs the whole game: it combs every few rows, mines what it finds, smelts bars and buys upgrades as soon as it can afford them. Its first run showed the first upgrade took far too long and coal was almost worthless, so I doubled coal's price, moved copper closer to the surface and made the Steel Spade cheaper. Now the first upgrade comes after a few minutes of play.</p>
+  <h2>Veins</h2>
+  <p>The newest addition is <b>branching veins</b>: rare glittering streaks of one mineral that wind through the rock and sometimes fork. I wanted them to feel like a lucky find, not wallpaper, so near the surface there's about one every 100 metres and deep down about one every 40. The deeper the vein, the better the mineral, so a vein near the bottom of the Crystal Caverns might be cobalt or diamond. The first time you mine into one, the game tells you to follow the glitter.</p>
+  <h2>Also in this build</h2>
+  <ul>
+    <li>Caves with treasure chests, and geodes you crack at the Jeweler.</li>
+    <li>Fossils and relics that fill museum shelves, each full shelf giving a lasting bonus.</li>
+    <li>Cave-ins in long tunnels, and support beams to stop them.</li>
+    <li>Dynamite, lifts to ride up your shaft, and a bucket or tube that sends your pack home without you.</li>
+    <li>A daily goal with a streak bonus.</li>
+    <li>Sound effects for every layer and every mineral.</li>
+  </ul>
+  <h2>What's next</h2>
+  <p>This is an early test, so expect changes. My list has more vein ideas, something good to spend coins on once you own every tool, and maybe more dig sites, but none of that is promised yet. If you play, I'd love to know how deep you get.</p>
+  <div class="ctas"><a class="btn btn-mint" href="https://digdeeper.sideeffectsstudio.buzz/">▶ Play DigDeeper</a><a class="btn btn-ghost" href="/dig-deeper">Read the guide</a></div>
+  <p><a href="/devlog">← All devlog posts</a></p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Rare Side Effects Studio</span>
+    <div class="legal">
+      <a href="/devlog">Devlog</a>
+      <a href="/stories">Stories</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy policy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

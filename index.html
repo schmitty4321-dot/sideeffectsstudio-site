@@ -60,6 +60,7 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 .btn-red { background: #e2483a; color: #fff; box-shadow: 0 6px 0 #9c2a20, 0 14px 30px #e2483a40; }
 .btn-copper { background: #e0823e; color: #2a1206; box-shadow: 0 6px 0 #9a4a18, 0 14px 30px #e0823e40; }
 .btn-ink { background: #ebe2cd; color: #1c1a17; box-shadow: 0 6px 0 #8f8574, 0 14px 30px #ebe2cd30; }
+.btn-brass { background: #d8b25a; color: #2b1d08; box-shadow: 0 6px 0 #8a6a2a, 0 14px 30px #d8b25a40; }
 .btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px #ffffff40; }
 .btn-ghost:hover { box-shadow: inset 0 0 0 2px #ffffffa0; }
 
@@ -111,6 +112,7 @@ h2 { font-size: clamp(38px, 5.5vw, 60px); margin: 8px 0 14px; }
 .game.tw { --glow: #e2483a2e; --accent: #ff9a8f; }
 .game.dd { --glow: #ffcf3a26; --accent: #ffcf3a; }
 .game.sr { --glow: #ebe2cd26; --accent: #ebe2cd; }
+.game.ph { --glow: #d8b25a26; --accent: #d8b25a; }
 .game.flip .media { order: 2; }
 .game .info { position: relative; }
 .game .logo-row { display: flex; align-items: center; gap: 14px; }
@@ -221,6 +223,7 @@ footer a { color: var(--muted); }
         <a class="btn btn-red" href="https://townwars.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Town Wars</a>
         <a class="btn btn-ink" href="https://samurairunner.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Samurai Runner</a>
         <a class="btn btn-copper" href="https://digdeeper.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play DigDeeper</a>
+        <a class="btn btn-brass" href="https://pilehunt.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play Pile Hunt</a>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -528,7 +531,35 @@ footer a { color: var(--muted); }
       </div>
     </article>
 
+    <article class="game ph" aria-labelledby="ph-title">
+      <div class="media">
+        <div class="phone"><img src="img/ph-vault.webp" alt="The coin room: a vault full of 125,000 coins, the odometer counting down, and a bin riding the pulley to the sorting machine" loading="lazy" width="540" height="960"></div>
+        <div class="phone small"><img src="img/ph-machine.webp" alt="The overbuilt coin machine: rails, polish brushes, plinko board, counting wheel and the clear collectors" loading="lazy" width="540" height="960"></div>
+      </div>
+      <div class="info">
+        <div class="logo-row">
+          <img src="img/ph-icon.png" alt="" width="256" height="256">
+          <div>
+            <h3 class="display" id="ph-title">Pile Hunt</h3>
+            <span class="status soon">Early test: play free</span>
+          </div>
+        </div>
+        <p class="tag">A vault, 125,000 coins, and one lost ring somewhere at the bottom.</p>
+        <ul>
+          <li><span><b>Dig with a tap.</b> Scoop coins into your bin, from bare hands to a mug, a bucket and a shovel.</span></li>
+          <li><span><b>Feed the machine.</b> Every coin rides an overbuilt sorting machine: rails, brushes, a weigh scale, plinko and a glass loop, then sells when it lands.</span></li>
+          <li><span><b>No x-ray, no detectors.</b> Nobody knows where the ring is; check every look-alike that rolls into the tray, and collect odd treasures for your photo book.</span></li>
+          <li><span><b>Build it up</b> with a pulley, a conveyor, a coin wrapper, an apprentice digger and a bank.</span></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-mint" href="https://pilehunt.sideeffectsstudio.buzz/" target="_blank" rel="noopener">▶ Play now</a>
+        </div>
+      </div>
+    </article>
+
     <div class="strip" role="list" aria-label="Screenshots">
+      <figure role="listitem"><img src="img/ph-vault.webp" alt="Pile Hunt coin vault" loading="lazy" width="540" height="960"><figcaption>Pile Hunt: the vault</figcaption></figure>
+      <figure role="listitem"><img src="img/ph-machine.webp" alt="Pile Hunt sorting machine" loading="lazy" width="540" height="960"><figcaption>Pile Hunt: the machine</figcaption></figure>
       <figure role="listitem"><img src="img/tts-tap.webp" alt="Tapping Tronchetto" loading="lazy" width="540" height="960"><figcaption>Tap Frenzy</figcaption></figure>
       <figure role="listitem"><img src="img/gq-mine.webp" alt="The gem mine brick breaker" loading="lazy" width="540" height="960"><figcaption>The Mine</figcaption></figure>
       <figure role="listitem"><img src="img/tts-drums.webp" alt="Five Sahur Drums on the reels" loading="lazy" width="540" height="960"><figcaption>5 Sahur Drums</figcaption></figure>

@@ -75,7 +75,7 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 .hero p.lead { font-size: clamp(18px, 2.2vw, 22px); color: var(--muted); max-width: 30em; margin: 0 0 28px; }
 .ctas { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-art { position: relative; height: 460px; }
-/* all seven games, two rows of four (Caravan Cartel's landscape splash takes two slots), each tilted a little; the one under the pointer straightens up */
+/* all eleven games, rows of four, each tilted a little; the one under the pointer straightens up */
 .hero-art { height: auto !important; max-width: 560px; width: 100%; justify-self: center; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px 14px; padding: 12px 0; }
 .hero-art .card { position: relative; width: 100%; height: auto; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 40px #0009; border: 3px solid #ffffff22;
   transform: translateY(var(--t)) rotate(var(--r)); transition: transform .2s ease; }
@@ -86,7 +86,11 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 .hero-art .c4 { --t: 0px; --r: -4deg; }
 .hero-art .c5 { --t: 14px; --r: 3deg; }
 .hero-art .c6 { --t: 2px; --r: -6deg; }
-.hero-art .c7 { --t: 6px; --r: 2deg; grid-column: span 2; height: 100%; object-fit: cover; }
+.hero-art .c7 { --t: 6px; --r: 4deg; }
+.hero-art .c8 { --t: -4px; --r: -3deg; }
+.hero-art .c9 { --t: 12px; --r: 5deg; }
+.hero-art .c10 { --t: 0px; --r: -5deg; }
+.hero-art .c11 { --t: 8px; --r: 2deg; }
 @media (max-width: 860px) {
   .hero { padding: 40px 0 64px; }
   .hero .wrap { grid-template-columns: 1fr; }
@@ -233,7 +237,11 @@ footer a { color: var(--muted); }
       <img class="card c4" src="img/pe-key.webp" alt="" width="900" height="1600">
       <img class="card c5" src="img/bc-splash.webp" alt="" width="900" height="1600">
       <img class="card c6" src="img/pa-key.webp" alt="" width="900" height="1600">
-      <img class="card c7" src="img/cc-hero.webp" alt="" width="640" height="568">
+      <img class="card c7" src="img/cc-key.webp" alt="" width="540" height="960">
+      <img class="card c8" src="img/tw-key.webp" alt="" width="540" height="960">
+      <img class="card c9" src="img/sr-key.webp" alt="" width="540" height="960">
+      <img class="card c10" src="img/dd-key.webp" alt="" width="540" height="960">
+      <img class="card c11" src="img/ph-key.webp" alt="" width="540" height="960">
     </div>
   </div>
 </header>

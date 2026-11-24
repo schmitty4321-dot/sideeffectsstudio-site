@@ -63,7 +63,7 @@ body > nav .wrap { display: flex; align-items: center; justify-content: space-be
 
 /* game pages */
 .game-page { --glow: #8f5cff33; }
-.game-page.tts { --glow: #ffb02e33; } .game-page.gq { --glow: #8f5cff3a; } .game-page.hg { --glow: #4fc3ff33; } .game-page.pe { --glow: #7bd34a33; } .game-page.bc { --glow: #ffb02e2e; } .game-page.pa { --glow: #6fc3ff2e; } .game-page.cc { --glow: #ff9b3d33; } .game-page.tw { --glow: #ff5a5a2e; } .game-page.dd { --glow: #ffcf3a2e; }
+.game-page.tts { --glow: #ffb02e33; } .game-page.gq { --glow: #8f5cff3a; } .game-page.hg { --glow: #4fc3ff33; } .game-page.pe { --glow: #7bd34a33; } .game-page.bc { --glow: #ffb02e2e; } .game-page.pa { --glow: #6fc3ff2e; } .game-page.cc { --glow: #ff9b3d33; } .game-page.tw { --glow: #ff5a5a2e; } .game-page.dd { --glow: #ffcf3a2e; } .game-page.sr { --glow: #e8e2d02e; } .game-page.ph { --glow: #d9a94a33; } .game-page.hh { --glow: #c98a5a2e; }
 .shots { display: flex; gap: 16px; overflow-x: auto; padding: 8px 2px 18px; scroll-snap-type: x mandatory; }
 .shots figure { margin: 0; flex: none; width: 200px; scroll-snap-align: start; }
 .shots.wide figure { width: min(520px, 86vw); }

@@ -6,7 +6,7 @@ const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..'), SITE = 'https://sideeffectsstudio.buzz';
 const read = f => fs.readFileSync(path.join(ROOT, f), 'utf8');
 const pick = (s, re) => (s.match(re) || [])[1] || '';
-const GAMES = { tts: 'Tap Tap Sahur', gq: 'Brainrot Gem Quest', hg: 'Hatch &amp; Grow', pe: 'Pocket Exfil', bc: 'Bumper Crop', pa: 'Pocket Acres', cc: 'Caravan Cartel', tw: 'Town Wars', dd: 'DigDeeper', sr: 'Samurai Runner', ph: 'Coin Cavern', hh: 'Hoarder House' };
+const GAMES = { tts: 'Tap Tap Sahur', gq: 'Brainrot Gem Quest', hg: 'Hatch &amp; Grow', pe: 'Pocket Exfil', bc: 'Bumper Crop', pa: 'Pocket Acres', cc: 'Caravan Cartel', tw: 'Town Wars', dd: 'DigDeeper', sr: 'Samurai Runner', ph: 'Coin Cavern', hh: 'Hoarder House', hx: 'HEXFIL' };
 
 // ---------- devlog index ----------
 const posts = fs.readdirSync(path.join(ROOT, 'devlog')).filter(f => f.endsWith('.html') && f !== 'index.html').map(f => {
